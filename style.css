@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+
+:root {
+  --branco: #FFFFFF;
+  --azul-claro: #8BACD9;
+  --esverdeado: #00FFF8;
+  --esverdeado-transparente: hsl(178, 100%, 50%, 0.45);
+  --azul-escuro-300: #0D192C;
+  --azul-escuro-200: #15263F;
+  --azul-escuro-100: #2E405A;
+
+  --titulo: 22px;
+  --corpo: 18px;
+  --subtitulo: 16px;
+}
+
+.main {
+  background-color: var(--azul-escuro-300);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Outfit;
+}
+
+.card {
+  background-color: var(--azul-escuro-200);
+  height: 543px;
+  width: 327px;
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.image {
+  border-radius: 8px;
+  height: 100%;
+  width: 100%;
+}
+
+.title {
+  color: var(--branco);
+  font-size: var(--titulo);
+  font-weight: 600;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+
+.title:hover {
+  color: var(--esverdeado);
+}
+
+.description {
+  font-weight: 300;
+  font-size: var(--corpo);
+  color: var(--azul-claro);
+  margin-bottom: 16px;
+}
+
+.information {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.value {
+  color: var(--esverdeado);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.time {
+  color: var(--azul-claro);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.divider {
+  background: var(--azul-escuro-100);
+  height: 1px;
+  border: none;
+  margin-top: 0px;
+  margin-bottom: 16px;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  font-size: var(--subtitulo);
+}
+
+.avatar {
+  margin-right: 16px;
+  width: 33px;
+  height: 33px;
+  border-color: var(--branco);
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 2px;
+}
+
+.creator {
+  color: var(--azul-claro);
+}
+
+.author {
+  color: var(--branco);
+  text-decoration: none;
+}
+
+.author:hover {
+  color: var(--esverdeado);
+}
+
+.header {
+  position: relative;
+  height: 278px;
+  width: 278px;
+  margin-bottom: 24px;
+}
+
+.header:hover .overlay {
+  opacity: 1;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--esverdeado-transparente);
+  opacity: 0;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: 500ms;
+}
+
+@media (min-width:1024px) {
+  .card {
+    height: 596px;
+    width: 350px;
+    padding-bottom: 32px;
+  }
+
+  .header {
+    height: 302px;
+    width: 302px;
+    margin-bottom: 24px;
+  }
+
+  .title {
+    margin-bottom: 16px;
+  }
+
+  .description {
+    margin-bottom: 24px;
+  }
+
+  .information {
+    margin-bottom: 24px;
+  }
+
+}
